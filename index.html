@@ -3,53 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>懂的都懂资源</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: sans-serif; line-height: 1.6; color: #333; padding: 20px; max-width: 800px; margin: 0 auto; }
-        header, footer { text-align: center; margin: 40px 0; }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        h2 { margin: 30px 0 15px; color: #444; }
-        p { margin-bottom: 15px; }
-        nav { margin: 20px 0; }
-        nav a { margin: 0 10px; color: #0066cc; text-decoration: none; }
-        section { margin: 40px 0; }
-        .contact a { display: block; margin: 5px 0; color: #0066cc; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #fafafa;
+            color: #333;
+            padding: 2rem 5%;
+        }
+        /* 页面标题 */
+        .page-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            letter-spacing: 1px;
+        }
+        /* 合集容器 */
+        .collection-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        /* 单个合集板块 */
+        .collection {
+            background-color: #fff;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .collection h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: #2d3748;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        /* 子链接列表 */
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+        .link-list li a {
+            text-decoration: none;
+            color: #4299e1;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+        .link-list li a:hover {
+            background-color: #4299e1;
+            color: #fff;
+        }
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            .page-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            .collection {
+                padding: 1.5rem;
+            }
+            .link-list {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .link-list li a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 0.6rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>张三</h1>
-        <p>前端开发者 · 设计师</p >
-        <nav>
-            <a href=" ">关于</a >
-            <a href="#work">项目</a >
-            <a href="#contact">联系</a >
-        </nav>
-    </header>
+    <!-- 页面标题 -->
+    <h1 class="page-title">懂的都懂资源</h1>
 
-    <main>
-        <section id="about">
-            <h2>关于我</h2>
-            <p>专注于创造简洁实用的网页应用。热爱技术与设计。</p >
+    <!-- 合集容器 -->
+    <div class="collection-container">
+        <!-- 合集一 -->
+        <section class="collection">
+            <h2>合集一</h2>
+            <ul class="link-list">
+                <li><a href="https://pan.quark.cn/s/74e4a6f61ed3">好看视频</a ></li>
+            </ul>
         </section>
 
-        <section id="work">
-            <h2>项目</h2>
-            <p><strong>电商平台</strong> - Vue.js + Node.js 全栈项目</p >
-            <p><strong>数据看板</strong> - React 可视化应用</p >
-            <p><strong>个人博客</strong> - 静态网站生成器</p >
+        <!-- 合集二 -->
+        <section class="collection">
+            <h2>合集 2</h2>
+            <ul class="link-list">
+                <li><a href="https://pan.quark.cn/s/74e4a6f61ed3">好看视频</a ></li>
+            </ul>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>联系</h2>
-            <a href="mailto:hello@example.com">hello@example.com</a >
-            <a href="https://github.com">GitHub</a >
+        <!-- 合集三 -->
+        <section class="collection">
+            <h2>合集 3</h2>
+            <ul class="link-list">
+                <li><a href="#">子链接3-1</a ></li>
+            </ul>
         </section>
-    </main>
-
-    <footer>
-        <p>© 2024 张三</p >
-    </footer>
+    </div>
 </body>
 </html>
